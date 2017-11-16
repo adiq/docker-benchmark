@@ -1,0 +1,65 @@
+ docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
+
+> dumbbench --precision 0.80 --initial 10 --maxiter 100 --float -- docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
+100000+0 records in
+100000+0 records out
+real	0m 23.16s
+user	0m 0.12s
+sys	0m 2.09s
+100000+0 records in
+100000+0 records out
+real	0m 28.24s
+user	0m 0.30s
+sys	0m 2.92s
+100000+0 records in
+100000+0 records out
+real	0m 25.83s
+user	0m 0.13s
+sys	0m 1.45s
+100000+0 records in
+100000+0 records out
+real	0m 23.28s
+user	0m 0.15s
+sys	0m 2.20s
+100000+0 records in
+100000+0 records out
+real	0m 21.69s
+user	0m 0.24s
+sys	0m 2.29s
+100000+0 records in
+100000+0 records out
+real	0m 19.68s
+user	0m 0.24s
+sys	0m 1.29s
+100000+0 records in
+100000+0 records out
+real	0m 21.49s
+user	0m 0.35s
+sys	0m 2.14s
+100000+0 records in
+100000+0 records out
+real	0m 22.57s
+user	0m 0.16s
+sys	0m 1.45s
+100000+0 records in
+100000+0 records out
+real	0m 19.18s
+user	0m 0.13s
+sys	0m 0.92s
+100000+0 records in
+100000+0 records out
+real	0m 21.80s
+user	0m 0.21s
+sys	0m 2.40s
+100000+0 records in
+100000+0 records out
+real	0m 22.57s
+user	0m 0.33s
+sys	0m 2.13s
+100000+0 records in
+100000+0 records out
+real	0m 23.02s
+user	0m 0.22s
+sys	0m 2.40s
+cmd: Ran 11 iterations (1 outliers).
+cmd: Rounded run time per iteration: 23.840000 +/- 0.380000 (1.6%)
