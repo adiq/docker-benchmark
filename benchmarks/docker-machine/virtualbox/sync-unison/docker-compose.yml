@@ -1,0 +1,11 @@
+version: "2"
+services:
+  vbox-benchmark-sync-unison:
+    image: alpine
+    volumes:
+      - vbox-benchmark-sync-unison-sync:/var/test:nocopy
+    command: ['watch', '-n3', 'cat /var/www/index.html']
+
+volumes:
+  vbox-benchmark-sync-unison-sync:
+    external: true
