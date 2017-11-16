@@ -1,0 +1,11 @@
+version: "2"
+services:
+  benchmark-sync-native:
+    image: alpine
+    volumes:
+      - benchmark-sync-native-sync:/var/test:nocopy
+    command: ['watch', '-n3', 'cat /var/www/index.html']
+
+volumes:
+  benchmark-sync-native-sync:
+    external: true
