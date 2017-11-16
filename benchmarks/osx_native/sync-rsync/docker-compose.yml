@@ -1,0 +1,11 @@
+version: "2"
+services:
+  benchmark-sync-rsync:
+    image: alpine
+    volumes:
+      - benchmark-sync-rsync-sync:/var/test:nocopy
+    command: ['watch', '-n3', 'cat /var/www/index.html']
+
+volumes:
+  benchmark-sync-rsync-sync:
+    external: true
