@@ -1,8 +1,13 @@
-docker-machine - vbox - nfs
+# VirtualBox & NFS
 
-docker-machine-nfs vbox-bench --shared-folder=/Users/adiq/Projects --force
+Machine created with:
+`docker-machine create --driver virtualbox --virtualbox-cpu-count 2 --virtualbox-disk-size 20000 --virtualbox-memory "8000" vbox-bench`
 
-dumbbench --precision 0.80 --initial 10 --maxiter 100 --float -- docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
+NFS configured using `docker-machine`; command `docker-machine-nfs vbox-bench --shared-folder=/Users/adiq/Projects --force`
+
+Logs:
+```
+$ dumbbench --precision 0.80 --initial 10 --maxiter 100 --float -- docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
 100000+0 records in
 100000+0 records out
 real	0m 0.94s
@@ -75,3 +80,4 @@ user	0m 0.03s
 sys	0m 0.16s
 cmd: Ran 13 iterations (3 outliers).
 cmd: Rounded run time per iteration: 1.640600 +/- 0.005700 (0.3%)
+```

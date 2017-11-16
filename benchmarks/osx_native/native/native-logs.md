@@ -1,6 +1,8 @@
- docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
+# Docker for Mac & Native
 
-> dumbbench --precision 0.80 --initial 10 --maxiter 100 --float -- docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
+Logs:
+```
+$ dumbbench --precision 0.80 --initial 10 --maxiter 100 --float -- docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
 100000+0 records in
 100000+0 records out
 real	0m 23.16s
@@ -62,4 +64,4 @@ real	0m 23.02s
 user	0m 0.22s
 sys	0m 2.40s
 cmd: Ran 11 iterations (1 outliers).
-cmd: Rounded run time per iteration: 23.840000 +/- 0.380000 (1.6%)
+cmd: Rounded run time per iteration: 23.840000 +/- 0.380000 (1.6%)```
