@@ -1,0 +1,11 @@
+version: "2"
+services:
+  benchmark-sync-unison:
+    image: alpine
+    volumes:
+      - benchmark-sync-unison-sync:/var/test:nocopy
+    command: ['watch', '-n3', 'cat /var/www/index.html']
+
+volumes:
+  benchmark-sync-unison-sync:
+    external: true
