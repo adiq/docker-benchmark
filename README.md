@@ -1,7 +1,12 @@
 # Docker Benchmarks
 Benchmark results of various docker configurations
 
-_[table of results will go here]_
+|                           | native   | nfs         | sync-native | sync-unison | sync-rsync |
+|---------------------------|----------|-------------|-------------|-------------|------------|
+| docker-machine virtualbox | 8.4340s  | 1.6406s     | unavailable | 0.5200s     | 0.3885s    |
+| docker for mac            | 23.8400s | unavailable | 0.5880s     | 0.4279s     | 0.4425s    |
+
+_above data is compiled from average time calculated by Dumbbench_
 
 ## Method of testing
 
