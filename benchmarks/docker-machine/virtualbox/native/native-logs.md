@@ -5,7 +5,7 @@ Machine created with:
 
 Logs:
 ```
-$ dumbbench --precision 0.80 --initial 10 --maxiter 100 --float -- docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
+$ docker run -it -v $(pwd):/var/test alpine time dd if=/dev/zero of=/var/test/test.dat bs=1024 count=100000
 100000+0 records in
 100000+0 records out
 real	0m 7.44s
@@ -80,6 +80,4 @@ sys	0m 3.02s
 100000+0 records out
 real	0m 7.43s
 user	0m 0.00s
-sys	0m 3.45s
-cmd: Ran 14 iterations (4 outliers).
-cmd: Rounded run time per iteration: 8.434000 +/- 0.071000 (0.8%)```
+sys	0m 3.45s```
