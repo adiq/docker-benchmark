@@ -1,0 +1,9 @@
+version: "2"
+
+options:
+  verbose: true
+syncs:
+  vbox-benchmark-sync-rsync-sync:
+    src: '/Users/adiq/Projects/docker-benchmark/data' # path where test file is located
+    sync_strategy: 'rsync'
+    sync_host_port: 10872
