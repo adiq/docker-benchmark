@@ -6,6 +6,7 @@ Benchmark results of various docker configurations
 | docker-machine virtualbox | 8.2393s  | 0.8879s      | n/a         | 0.3327s     | 0.2382s    |
 | docker-machine xhyve      | 0.0883s  | experimental | n/a         | n/a         | n/a        |
 | docker for mac            | 22.7092s | n/a          | 0.5592s     | 0.4136s     | 0.3242s    |
+| docker for mac edge       | 23.4277s | n/a          | ?           | ?           | ?          |
 
 ## Method of testing
 
