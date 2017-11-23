@@ -4,7 +4,7 @@ Benchmark results of various docker configurations
 |                           | native   | nfs          | sync-native | sync-unison | sync-rsync |
 |---------------------------|----------|--------------|-------------|-------------|------------|
 | docker-machine virtualbox | 8.2393s  | 0.8879s      | n/a         | 0.3327s     | 0.2382s    |
-| docker-machine xhyve      | 0.0883s  | experimental | n/a         | n/a         | n/a        |
+| docker-machine xhyve      | 0.0883s  | 1.0770s      | n/a         | 0.3150s     | 0.1860s    |
 | docker for mac            | 22.7092s | n/a          | 0.5592s     | 0.4136s     | 0.3242s    |
 | docker for mac edge       | 23.4277s | n/a          | ?           | ?           | ?          |
 

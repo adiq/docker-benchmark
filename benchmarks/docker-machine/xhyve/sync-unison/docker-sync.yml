@@ -1,0 +1,8 @@
+version: "2"
+
+options:
+  verbose: true
+syncs:
+  xhyve-benchmark-sync-unison-sync:
+    src: '/Users/adiq/Projects/docker-benchmark/data' # path where test file is located
+    sync_strategy: 'unison'

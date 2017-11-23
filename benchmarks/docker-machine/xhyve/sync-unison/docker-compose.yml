@@ -1,0 +1,11 @@
+version: "2"
+services:
+  xhyve-benchmark-sync-unison:
+    image: alpine
+    volumes:
+      - xhyve-benchmark-sync-unison-sync:/var/test:nocopy
+    command: ['watch', '-n3', 'cat /var/www/index.html']
+
+volumes:
+  xhyve-benchmark-sync-unison-sync:
+    external: true

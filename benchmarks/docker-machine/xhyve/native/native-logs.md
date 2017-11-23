@@ -1,7 +1,9 @@
-# xHyve & Native
+# xhyve & Native
 
 Machine created with:
 `docker-machine create --driver xhyve --xhyve-cpu-count 2 --xhyve-disk-size 20000 --xhyve-memory-size 8000 xhyve-bench`
+
+*no sync*
 
 Logs:
 ```
